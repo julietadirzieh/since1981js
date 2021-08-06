@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Etiquetas Meta requeridas -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- SEO -->
+	<meta name="description"
+		content="Ofrecemos una gran variedad de telas y camisas, lisas y estampadas, y en diversos colores. Conocé todos nuestros productos y comprá por mayor.">
+	<meta name="keywords"
+		content="compra, mayorista, telas, camisas, batista, poplin, estampada, lisa, elastizada, colores, diseños, CABA">	
+	<title>Since 1981 Mayorista Textil - Productos</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<!-- Mi CSS -->
+	<link rel="stylesheet" href="../css/estilos.css">
+	<link rel="icon" href="../img/logo.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<!-- Menú navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container">
+				<a class="navbar-brand titulo" href="../index.html">
+					<img src="../img/logo.png" alt="Logo" class="imgLogo">Since
+					1981 Textil</a>
+				<button class="navbar-toggler botonToggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav nav-fill w-100">
+						<li class="nav-item">
+							<a class="nav-link enlaces" href="../index.html">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link enlaces" href="nosotros.html">Nosotros</a>
+						</li>
+						<li class="nav-item dropdown">
+							<!-- Dropdown para poder ver el submenu -->
+							<a class="nav-link dropdown-toggle enlaces" href="productos.html"
+								id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								Productos</a>
+							<ul class="dropdown-menu fondoAzul enlaces" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item enlaces" href="productos.html#telasxmayor">Telas por
+										mayor</a></li>
+								<li><a class="dropdown-item enlaces" href="productos.html#camisasxmayor">Camisas por
+										mayor</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link enlaces" href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link enlaces" href="contacto.html">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<h1>Productos</h1>
+		<div>
+			<h2 id="telasxmayor">Telas por mayor</h2>
+		</div>
+
+		<div class="d-grid gap-2 col-6 mx-auto text-center" style="margin: 0.5em;">
+			<a href="download/Since 1981 - Catalogo.pdf" download="Since 1981 Catalogo"
+				class="btn btn-light descargarCatalogo">Descargar catálogo</a>
+				<p>Para cotizar tu compra, dirigite a la sección <a href="pages/contacto.html"
+					class="aclaraAzul">Contacto</a>.</p>
+		</div>
+
+		<div id="grilla">
+			<!-- grids con todos los productos en 4 filas y 2 columnas para ≥768px, y en 7 filas y 1 columna para <768px -->
+
+			<div class="telabatistalisa">
+				<!-- primera columna del grids para todas las pantallas-->
+				<div class="card bg-light text-center" style="width:18rem;">
+					<!-- formato de card -->
+					<div class="card-body bg-light">
+						<!-- Boton del modal 1 de Productos -->
+						<button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#modalProductos1">
+							<img src="../img/batistalisa.jpeg" alt="modal" class="imagenDeProductos">
+						</button>
+						<!-- Modal 1 de Productos -->
+						<div class="modal fade" id="modalProductos1" tabindex="-1" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img src="../img/batistalisa.jpeg" alt="modal" class="card-img-top modal-img">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Cerrar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="card-title pt-3">Batista Lisa</h5>
+						<p class="card-text"><small class="text-muted">10 colores disponibles.</small></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="telapoplinestampada">
+				<!-- segunda columna de la primera fila del grids para ≥768px y cuarta fila para <768px-->
+				<div class="card bg-light text-center" style="width:18rem;">
+					<!-- formato de card -->
+					<div class="card-body bg-light">
+						<!-- Boton del modal 2 de Productos -->
+						<button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#modalProductos2">
+							<img src="../img/poplinestampado.png" alt="modal" class="imagenDeProductos">
+						</button>
+						<!-- Modal 2 de Productos -->
+						<div class="modal fade" id="modalProductos2" tabindex="-1" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img src="../img/poplinestampado.png" alt="modal" class="card-img-top modal-img">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Cerrar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="card-title pt-3">Poplin</h5>
+						<p class="card-text"><small class="text-muted">Lisas y estampadas.</small></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="telabatistaestampada">
+				<!-- primera columna de la segunda fila del grids para ≥768px y segunda fila para <768px -->
+				<div class="card bg-light text-center border" style="width:18rem;">
+					<!-- formato de card -->
+					<div class="card-body bg-light">
+						<!-- Boton del modal 3 de Productos -->
+						<button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#modalProductos3">
+							<img src="../img/batistaestampada.jpg" alt="modal" class="imagenDeProductos">
+						</button>
+						<!-- Modal 3 de Productos -->
+						<div class="modal fade" id="modalProductos3" tabindex="-1" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img src="../img/batistaestampada.jpg" alt="modal" class="card-img-top modal-img">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Cerrar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="card-title pt-3">Batista Estampada</h5>
+						<p class="card-text"><small class="text-muted">Más de 20 diseños disponibles.</small>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="telapoplinelastizadaestampada">
+				<!-- segunda columna de la segunda fila del grids para ≥768px y quinta fila para <768px -->
+				<div class="card bg-light text-center border" style="width:18rem;">
+					<!-- formato de card -->
+					<div class="card-body bg-light">
+						<!-- Boton del modal 4 de Productos -->
+						<button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#modalProductos4">
+							<img src="../img/poplinelastizadoliso.png" alt="modal" class="imagenDeProductos">
+						</button>
+						<!-- Modal 4 de Productos -->
+						<div class="modal fade" id="modalProductos4" tabindex="-1" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img src="../img/poplinelastizadoliso.png" alt="modal"
+											class="card-img-top modal-img">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Cerrar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h5 class="card-title pt-3">Poplin Elastizado</h5>
+						<p class="card-text"><small class="text-muted">Lisas y estampadas.</small></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="camisas">
+				<!-- columna de la cuarta fila del grids para ≥768px y septima fila para <768px -->
+				<h2 id="camisasxmayor">Camisas por mayor</h2>
+				<div class="card bg-light text-center border" style="width:18rem;">
+					<!-- formato de card -->
+					<div class="card-body bg-light">
+						<!-- Boton del modal 5 de Productos -->
+						<button type="button" class="border-0" data-bs-toggle="modal" data-bs-target="#modalProductos5">
+							<img src="../img/camisas.jpeg" alt="modal" class="imagenDeProductos">
+						</button>
+						<!-- Modal 5 de Productos -->
+						<div class="modal fade" id="modalProductos5" tabindex="-1" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<img src="../img/camisas.jpeg" alt="modal" class="card-img-top modal-img">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary"
+											data-bs-dismiss="modal">Cerrar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="card-text pt-3"><small class="text-muted">Contamos con más de 50 diseños exclusivos
+								en variedad de colores.</small></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="d-grid gap-2 col-6 mx-auto" style="margin: 0.5em;">
+			<a href="download/Since 1981 - Catalogo.pdf" download="Since 1981 Catalogo"
+				class="btn descargarCatalogo">Descargar catálogo</a>
+		</div>
+
+		<!-- Sección final de todos los htmls en 3 bloques-->
+		<div class="row seccionFinal final">
+			<div class="column eliminarCategoria">
+				<!-- Bloque 1-->
+				<h3 class="seccionFinal__texto--titulo">Categorías</h3>
+				<p class="seccionFinal__texto"><a href="../index.html" class="aclaraAzul subrayadoChico">Inicio
+					</a></p>
+				<p class="seccionFinal__texto"><a href="nosotros.html" class="aclaraAzul subrayadoChico">
+						Nosotros</a></p>
+				<p class="seccionFinal__texto"><a href="#productos" class="aclaraAzul subrayadoChico">
+						Productos</a></p>
+				<p class="seccionFinal__texto"><a href="preguntasfrecuentes.html" class="aclaraAzul subrayadoChico">
+						Preguntas Frecuentes</a></p>
+				<p class="seccionFinal__texto"><a href="contacto.html" class="aclaraAzul subrayadoChico">
+						Contacto</a></p>
+			</div>
+
+			<div class="column">
+				<!-- Bloque 2-->
+				<h3 class="seccionFinal__texto--titulo">Contactános</h3>
+				<p class="seccionFinal__texto"><img src="../img/mail.png" alt="mail" class="icono"><a
+						href="mailto:estero1981@gmail.com" class="aclaraAzul subrayadoChico">estero1981@gmail.com</a>
+				</p>
+				<p class="seccionFinal__texto"><img src="../img/location.png" alt="ubicacion" class="icono"><a
+						href="https://goo.gl/maps/3X4cDZDaMwfHLcvi8" class="aclaraAzul subrayadoChico">Santiago del
+						Estero 306,
+						C.A.B.A.</a>
+				</p>
+			</div>
+
+			<div class="column">
+				<!-- Bloque 3-->
+				<h3 class="seccionFinal__texto--titulo">Sigamos conectados</h3>
+				<p class="seccionFinal__texto"><img src="../img/insta.png" alt="insta" class="icono"><a
+						href="https://www.instagram.com/since1981textil/"
+						class="aclaraAzul subrayadoChico">@since1981textil</a></p>
+				<p class="seccionFinal__texto"><img src="../img/fb.png" alt="fb" class="icono"><a
+						href="https://www.facebook.com/since1981textil-588467475171013"
+						class="aclaraAzul subrayadoChico">/since1981textil</a></p>
+				<p class="seccionFinal__texto"><img src="../img/whatsapp.png" alt="whatsapp" class="icono"><a
+						href="https://api.whatsapp.com/send?phone=5491152262165"
+						class="aclaraAzul subrayadoChico">Whatsapp</a></p>
+			</div>
+		</div>
+
+	</main>
+
+	<footer>
+		<!-- Footer -->
+		<p>Copyright Since 1981 ®. Todos los derechos reservados.</p>
+	</footer>
+
+	<!-- Popper & Bootsrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+		integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+		integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

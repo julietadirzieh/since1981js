@@ -1,0 +1,17 @@
+$letter-size: 1em;
+$title-size: 2.2em;
+$subtitle-size: 1.5em;
+
+/*caracteristicas generales*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-weight: 400;
+	color: $color-azul;
+	background-color:$color-gris;
+}
+

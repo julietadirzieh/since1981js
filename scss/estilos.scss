@@ -1,0 +1,573 @@
+/*para importar otros scss*/
+@import "colores";
+@import "general";
+@import "header";
+@import "bloquefinal";
+@import "footer";
+
+/*parametro del estilo de las letras*/
+@mixin fontStyle($font-size){
+	color: $color-azul;
+	text-align: center;
+	margin: 15px;
+	font-size: $font-size;
+}
+
+/*para definir los titulos de todas las paginas*/
+h1{ 	
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	padding: 10px;
+	animation-name:subtitulo;
+	animation-duration: 2s;
+	@include fontStyle($title-size);
+}
+
+/*para que los títulos de las páginas aparezcan con un efecto*/
+@keyframes subtitulo{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/*para definir los subtitulos y letras*/
+h2{ 	
+	@include fontStyle($subtitle-size);
+} 
+
+.detalleCombo{ 	
+	padding-bottom: 10px;
+	@include fontStyle(0.8em);
+} 
+
+h3{ 	
+	font-weight: bold;
+	text-transform: uppercase;
+	@include fontStyle(1.3em);
+} 
+
+/*esto es para los enlaces que quiero que estén en azul y cuando se pasa el mouse en blanco*/
+a.deAzulABlanco{
+	color: $color-azul;
+	text-decoration: none;
+	text-transform: none;
+	line-height: 15px;
+	font-size: $letter-size;
+}
+
+a.deAzulABlanco:hover{
+	color:white !important;
+}
+
+/*esto es para los enlaces que quiero que estén en azul y cuando se pasa el mouse en azul claro*/
+a.aclaraAzul{
+	@extend a.deAzulABlanco;
+}
+
+a.aclaraAzul:hover{
+	color:#4c74a0 !important;
+}
+
+/*esto es para los enlaces que quiero que estén en azul y cuando se pasa el mouse en blanco*/
+a.descargarCatalogo{
+	color: $color-azul !important;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #f8f8f8;
+}
+
+a.descargarCatalogo:hover{
+	background-color: #1e3752;
+	color:white !important;
+}
+
+/*esto es para establecer un máximo de ancho al carrusel en el "index"*/
+.carrusel{
+	width: 90%;
+	margin: 10px auto 20px auto;
+}
+
+/*esto es lo genérico para las secciones*/
+section{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	width:99%;
+}
+
+section article{
+	width: 100%;
+	line-height: 20px;
+	padding: 10px;
+}
+
+/*para definir las secciones del "index"*/
+.fondoTela{
+	background-image: url(../img/fondonosotros.png);
+	width: 100%;
+	border-top: 2px solid #CCC;
+	border-bottom: 2px solid #CCC;
+}
+
+.iconosIndex{
+	width: 100px;
+	height: 100px;
+	padding-top: 5px;
+} 
+
+.fotosDeLaSeccionDelIndex{
+	max-width: 100%;
+	padding: 10px;
+} 
+
+
+/*esto es lo genérico para el contenido principal en html "nosotros"*/
+.contenedor {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 10px;
+	line-height: 25px;
+
+	.recuadroDeNosotros {
+		background-image: url(../img/fondonosotros.png);
+		border-radius: 15px;
+		padding: 20px;
+		align-items: center;
+		margin-bottom: 20px; 
+		display: flex;
+		overflow: auto; 	
+	}
+}
+
+.recuadroDeNosotros__img {
+	width: 300px;
+	height: 250px;
+	max-width: 100%;
+}
+
+.recuadroDeNosotros__video {
+	width: 400px;
+	height: 250px;
+	max-width: 100%;
+	cursor: pointer;
+}
+
+.recuadroDeNosotros__parrafo {
+	line-height: 40px;
+	font-size: $subtitle-size;
+	margin: 30px;
+	text-align: center;
+}
+
+.recuadroDeNosotros__parrafo--titulo {
+	@extend.recuadroDeNosotros__parrafo;
+	font-size: 1.6em;
+}
+
+
+/*esto es grids para el html de "productos"*/
+#grilla{
+	display:grid;
+	grid-template-areas: 
+		"telabatistalisa telapoplinestampada"
+		"telabatistaestampada telapoplinelastizadaestampada"
+		"camisas camisas";
+	grid-template-columns: repeat(2,1/2fr);
+	grid-template-rows: 1/2fr, 1/2fr, 1/2fr;
+	grid-gap: 20px;
+	margin: 50px 200px;
+	justify-items: center;
+	align-items: center;
+}
+
+.telabatistalisa{
+	grid-area: telabatistalisa;
+}
+
+.telabatistaestampada{
+	grid-area: telabatistaestampada;
+}
+
+.telapoplinestampada{
+	grid-area: telapoplinestampada;
+}
+
+.telapoplinelastizadaestampada{
+	grid-area: telapoplinelastizadaestampada;
+}
+
+.camisas{
+	grid-area: camisas;
+}
+
+/*estos ids son para generar enlaces internos dentro del html de "productos"*/
+#telasxmayor, #camisasxmayor{ 	
+	text-decoration: underline;
+	font-weight: bold;
+	margin-top: 10px;
+} 
+
+/*esta es para las imágenes de "productos"*/
+.imagenDeProductos{
+	max-width: 100%;
+	width: 300px;
+	height: 300px;
+	cursor: pointer;
+}
+
+
+/*define la lista del html de "preguntasfrecuentes"*/
+ul.preguntas{ 
+	list-style: square;
+	margin: 15px 0px 0px 15px;
+}
+
+ul li.preguntas{
+	font-size: $letter-size;
+	line-height: 60px;
+}
+
+/*define las caracteristicas de la tabla de bs*/
+div table{	
+	font-size: $letter-size;
+	color:#1e3752;
+} 
+
+/*para diferenciar las respuestas en el html de "preguntas frecuentes"*/
+.italic{ 	
+	font-style: italic;
+} 
+
+/*esto es para que los enlaces de las preguntas frecuentes se vean para clickear*/
+a.subrayado{
+	@extend a.aclaraAzul;
+	text-decoration: underline;
+}
+
+/*para que las imágenes se achiquen según las pantallas en "preguntas frecuentes"*/
+.imagenPaletaDeColores{
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+	max-width:100%;
+	cursor: pointer;
+}
+
+/*para que las imagenes de los modales sean responsive*/
+#modalPaleta1, #modalPaleta2, #modalPaleta3, #modalNosotros, #modalProductos1, #modalProductos2, #modalProductos3, #modalProductos4, #modalProductos5, .modal-img{
+	width: 100%;
+	max-width: 100%;
+}
+
+form{
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+	margin-bottom: 20px;
+}
+
+#cotizar{
+	margin: 30px auto;
+	width: 50%;
+	text-align: center;
+	background-image: url(../img/fondonosotros.png);
+}
+
+.divQueCotiza{
+	margin-top: 30px;
+}
+
+#consulta{
+	margin-bottom: 20px;
+}
+
+#formulario{
+	width: 70%;
+	margin: 10px auto;
+}
+
+iframe{
+	border-radius: 1em;
+	border: 1px solid #CCC;
+	width: 70%;
+	height: 300px;
+}	
+
+/*usé mapas y each para darle color a los botones del formulario*/
+$contactos: (
+	enviar: #4c74a0,
+	limpiar: $color-gris
+);
+
+@each $contacto, $color in $contactos{ 
+.contactos--#{$contacto} {
+	background-color: $color;
+}
+}
+
+.inputForm{
+	background-color: #f8f8f8;
+	border-radius: 0.5em;
+	border: 1px solid #CCC;
+	width: 99%;
+	margin: 0px;
+	padding: 5px;
+}
+
+.inputForm1{
+	@extend .inputForm;
+	width: 70%;
+}
+
+p.letraChica{
+	margin: 0px;
+	padding: 0px;
+	font-size: 0.7em;
+}
+
+/*para que al pasar el mouse por el boton, se agrande el ancho del boton*/
+.botonEnviar{
+	width: 50%;
+	color: $color-gris;
+	border-radius: 1em;
+	border: 1px solid #CCC;
+}
+
+.botonEnviar:hover{
+	background-color: #1e3752;
+	color: #f8f8f8;
+}
+
+.botonConsultar{
+	width: 70%;
+	border-radius: 1em;
+	border: 1px solid #CCC;
+	background-color: #1e3752;
+	color: #f8f8f8;
+	margin: 0 auto;
+}
+
+.botonConsultar:hover{
+	color: #d9d9d9;
+	background-color: #4c74a0;
+}
+
+/*responsive grids en pantallas de entre 780px a 980px*/
+@media screen and (min-width:780px) and (max-width:980px)
+{
+	#grilla{
+		margin: 0px;
+	}
+}
+
+/*responsive en pantallas de entre 480px a 780px*/
+@media screen and (min-width:480px) and (max-width:780px)
+{
+	h1 {
+		font-size: 1.8em;
+	}
+
+	h2{
+		font-size: 1.3em;
+	}
+
+	.iconosIndex{
+		width: 80px;
+		height: 80px;
+		padding: 5px;
+	} 
+
+	.contenedor {
+		width: 100%;
+		height: auto;
+		margin: 0px;
+	}
+	
+	.recuadroDeNosotros__img{
+		width: 200px;
+		height: 170px;
+		padding: 2px;
+	}
+	
+	.recuadroDeNosotros__video {
+		width: 300px;
+		height: 175px;
+		padding: 2px;
+	}
+
+	.recuadroDeNosotros__parrafo {
+		line-height: 20px;
+		margin: 20px;
+		font-size: $letter-size;
+	}
+
+	.recuadroDeNosotros__parrafo--titulo {
+		font-size: $letter-size;
+	}
+
+	#grilla{
+		display:grid;
+		grid-template-areas: 
+			"telabatistalisa"
+			"telabatistaestampada"
+			"telapoplinestampada" 
+			"telapoplinelastizadaestampada"
+			"camisas";
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5,1/2fr);
+		grid-gap:10px;
+		align-items: center;
+		margin: 0px;
+	}
+
+	.telabatistalisa{
+		grid-area: telabatistalisa;
+	}
+	
+	.telabatistaestampada{
+		grid-area: telabatistaestampada;
+	}
+	
+	.telapoplinestampada{
+		grid-area: telapoplinestampada;
+	}
+	
+	.telapoplinelastizadaestampada{
+		grid-area: telapoplinelastizadaestampada;
+	}
+	
+	.camisas{
+		grid-area: camisas;
+	}
+
+	.imagenPaletaDeColores{
+		width: 200px;
+		height: 200px;
+		padding: 8px;
+	}
+
+}
+
+/*responsive en pantallas de menos de 480px*/
+@media screen and (max-width: 480px)
+{
+	h1 {
+		font-size: 1.6em;
+	}
+
+	h2{ 	
+		font-size: $letter-size;
+	} 
+
+	h3{ 
+		text-transform: none;
+	}
+
+	.detalleCombo{
+		font-size: 0.6em;
+	}
+
+	a.deAzulABlanco{
+		line-height: 10px;
+		font-size: 0.8em;
+	}
+
+	a.subrayadoChico{
+		text-decoration: underline;
+	}
+
+
+	section{
+		justify-content: center;
+		padding: 0px;
+	}
+
+	.iconosIndex{
+		width: 50px;
+		height: 50px;
+		padding: 5px;
+	} 
+
+	.fotosDeLaSeccionDelIndex{
+		visibility: hidden;
+		display: none;
+		padding: 0px;
+	}  
+
+	.contenedor {
+		width: 100%;
+		height: auto;
+		margin: 0px;
+	}
+	
+	.recuadroDeNosotros__img {
+		width: 185px;
+		height: 150px;
+		padding: 0px;
+	}
+	
+	.recuadroDeNosotros__video {
+		visibility: hidden;
+		display: none;
+	}
+
+	.recuadroDeNosotros__parrafo {
+		line-height: 20px;
+		margin: 10px;
+		font-size: 0.8em;
+	}
+
+	.recuadroDeNosotros__parrafo--titulo {
+		font-size: $letter-size;
+	}
+
+	#grilla{
+		display:grid;
+		grid-template-areas: 
+		"telabatistalisa"
+		"telabatistaestampada"
+		"telapoplinestampada" 
+		"telapoplinelastizadaestampada"
+		"camisas";
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5,1/2fr);
+		grid-gap:10px;
+		justify-items: center;
+		align-items: center;
+		margin: 0;
+	}
+
+	.telabatistalisa{
+		grid-area: telabatistalisa;
+	}
+	
+	.telabatistaestampada{
+		grid-area: telabatistaestampada;
+	}
+	
+	.telapoplinestampada{
+		grid-area: telapoplinestampada;
+	}
+	
+	.telapoplinelastizadaestampada{
+		grid-area: telapoplinelastizadaestampada;
+	}
+	
+	.camisas{
+		grid-area: camisas;
+	}
+
+	.imagenPaletaDeColores{
+		width: 150px;
+		height: 150px;
+		padding: 5px;
+	}
+	
+	.letraChica{
+		font-size: 0.8em;
+	}	
+
+}
+
+
+

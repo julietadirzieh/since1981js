@@ -1,0 +1,93 @@
+/*esto es el bloque final de todos los htmls*/
+.seccionFinal{
+	background: $background-color-grey;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	border-top: 1px solid $color-azul;
+}
+
+.column {
+	float: left;
+	width: 33%;
+}
+  
+.final:after {
+	display: table;
+	clear: both;
+  }
+
+/*esto es un elemento del bloque final*/
+.seccionFinal__texto{
+	color: $color-azul;
+	text-transform: none;
+	text-decoration: none;
+	line-height: 15px;
+	padding: 0px;
+	font-size: $letter-size;
+} 
+
+/*esto es una modificación del elemento del bloque final*/
+.seccionFinal__texto--titulo{
+@extend .seccionFinal__texto;
+	font-size: 1.2em;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 25px;
+} 
+
+.icono{
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+} 
+
+/*para hacer responsive los iconos*/
+@media screen and (min-width:480px) and (max-width:780px)
+{
+	.icono{
+		width: 15px;
+		height: 15px;
+		margin: 5px;
+	} 
+
+	.eliminarCategoria{
+	display:none;
+	} 
+
+	.column {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	.icono{
+		width: 10px;
+		height: 10px;
+		margin: 2px;
+	} 
+
+	.seccionFinal{
+        width: auto;
+		height: 10%;
+    }
+
+	.column {
+		width: 50%;
+		height: 10%;
+	}
+
+	.seccionFinal__texto{
+		font-size: 0.8em;
+		line-height: 10px;
+	} 
+		
+	.seccionFinal__texto--titulo{
+		font-size: $letter-size;
+		line-height: 12px;
+	} 
+	.eliminarCategoria{
+		display:none;
+	} 
+}
