@@ -37,7 +37,7 @@ $(document).ready(() => {
     $("#mensajeFinal").html("")
       .css({
         "margin": "0 auto",
-        "width": "70%",
+        "width": "80%",
         "border": "1px solid #CCC",
         "border-radius": "1em",
         "text-align": "center",
