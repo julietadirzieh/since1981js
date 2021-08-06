@@ -350,7 +350,7 @@ section article {
 }
 
 .recuadroDeNosotros__video {
-  width: 400px;
+  width: 300px;
   height: 250px;
   max-width: 100%;
   cursor: pointer;
@@ -592,8 +592,8 @@ p.letraChica {
     padding: 2px;
   }
   .recuadroDeNosotros__video {
-    width: 300px;
-    height: 175px;
+    width: 200px;
+    height: 170px;
     padding: 2px;
   }
   .recuadroDeNosotros__parrafo, .recuadroDeNosotros__parrafo--titulo {
@@ -693,9 +693,8 @@ p.letraChica {
     margin: 0px;
   }
   .recuadroDeNosotros__img {
-    width: 185px;
-    height: 150px;
-    padding: 0px;
+    visibility: hidden;
+    display: none;
   }
   .recuadroDeNosotros__video {
     visibility: hidden;

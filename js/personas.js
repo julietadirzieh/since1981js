@@ -63,7 +63,7 @@ $(document).ready(() => {
       $("#cotizar").show();
       $("#consulta").show();
       $("#mensajeFinal").hide();
-    }, 4000);
+    }, 5000);
 
     // para almacenar el array en formato JSON en el storage. uno de base de datos de usuario y otro de pedidos por usuario
     localStorage.setItem("usuarios", JSON.stringify(personas));
