@@ -339,7 +339,7 @@ p.letraChica{
 }
 
 .botonConsultar{
-	width: 70%;
+	width: 100%;
 	border-radius: 1em;
 	border: 1px solid #CCC;
 	background-color: #1e3752;
@@ -444,6 +444,10 @@ p.letraChica{
 		width: 200px;
 		height: 200px;
 		padding: 8px;
+	}
+
+	#cotizar{
+		width: 70%;
 	}
 
 }
@@ -565,6 +569,14 @@ p.letraChica{
 	.letraChica{
 		font-size: 0.8em;
 	}	
+
+	#cotizar{
+		width: 85%;
+	}
+
+	#formulario{
+		width: 85%;
+	}
 
 }
 
